@@ -3,7 +3,7 @@ import { Button } from "../ui/button"
 
 export const PortHeader = () => {
   return (
-    <header className="flex w-full flex-col justify-between space-y-3 bg-accent px-3 py-2 md:flex-row md:items-center">
+    <header className="flex w-full flex-col justify-between space-y-3 bg-accent px-3 py-2 lg:flex-row lg:items-center">
       {/* Title */}
       <div className="flex h-fit flex-row items-center space-x-2">
         <Network className="h-5 w-5 md:h-6 md:w-6" />
@@ -13,7 +13,7 @@ export const PortHeader = () => {
       </div>
 
       {/* Action */}
-      <div className="flex h-fit w-full flex-row items-center md:w-fit">
+      <div className="flex h-fit w-full flex-row items-center lg:w-fit">
         <Button className="w-full rounded">
           <RotateCw />
           Refresh
