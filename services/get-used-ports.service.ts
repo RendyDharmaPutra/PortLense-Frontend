@@ -5,7 +5,7 @@ export const getUsedPorts = async (): Promise<
   ApiSuccessResponse<Port[]> | ApiErrorResponse
 > => {
   try {
-    const res = await fetch("http://localhost:3001/ports")
+    const res = await fetch(`${process.env.API_URL}/ports`)
 
     return await res.json()
   } catch (error) {
