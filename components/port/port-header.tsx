@@ -3,7 +3,7 @@ import { Button } from "../ui/button"
 
 export const PortHeader = () => {
   return (
-    <header className="flex w-full flex-col justify-between space-y-3 bg-accent px-3 py-2 lg:flex-row lg:items-center">
+    <header className="flex w-full flex-col justify-between space-y-3 border-b bg-accent px-3 py-2 lg:flex-row lg:items-center">
       {/* Title */}
       <div className="flex h-fit flex-row items-center space-x-2">
         <Network className="h-5 w-5 md:h-6 md:w-6" />

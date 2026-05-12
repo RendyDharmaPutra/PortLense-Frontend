@@ -44,7 +44,7 @@ const ports: Port[] = [
 export const PortTable = () => {
   return (
     <Table className="font-mono">
-      <TableHeader className="border-y bg-accent">
+      <TableHeader className="bg-accent">
         <TableRow>
           <TableHead className="w-1/4 px-3 py-2">Port</TableHead>
           <TableHead className="w-1/2 px-3 py-2">Address</TableHead>
