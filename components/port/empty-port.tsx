@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Empty,
   EmptyContent,
@@ -8,8 +10,11 @@ import {
 } from "@/components/ui/empty"
 import { Network, RefreshCcwIcon } from "lucide-react"
 import { Button } from "../ui/button"
+import { useRouter } from "next/navigation"
 
 export const EmptyPort = () => {
+  const router = useRouter()
+
   return (
     <Empty className="h-full bg-muted/30">
       <EmptyHeader>
@@ -23,7 +28,7 @@ export const EmptyPort = () => {
         </EmptyDescription>
       </EmptyHeader>
       <EmptyContent>
-        <Button variant="outline">
+        <Button variant="outline" onClick={() => router.refresh()}>
           <RefreshCcwIcon />
           Refresh
         </Button>

@@ -1,7 +1,12 @@
+"use client"
+
 import { Network, RotateCw } from "lucide-react"
 import { Button } from "../ui/button"
+import { useRouter } from "next/navigation"
 
 export const PortHeader = () => {
+  const router = useRouter()
+
   return (
     <header className="flex w-full flex-col justify-between space-y-3 border-b bg-accent px-3 py-2 lg:flex-row lg:items-center">
       {/* Title */}
@@ -14,7 +19,7 @@ export const PortHeader = () => {
 
       {/* Action */}
       <div className="flex h-fit w-full flex-row items-center lg:w-fit">
-        <Button className="w-full rounded">
+        <Button className="w-full rounded" onClick={() => router.refresh()}>
           <RotateCw />
           Refresh
         </Button>
