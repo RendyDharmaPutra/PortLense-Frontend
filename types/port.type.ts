@@ -6,5 +6,5 @@ export enum PortProtocol {
 export type Port = {
   protocol: PortProtocol
   port: number
-  address: string
+  ip: string
 }

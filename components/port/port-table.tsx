@@ -7,146 +7,9 @@ import {
   TableHeader,
   TableRow,
 } from "../ui/table"
+import { Port } from "@/types/port.type"
 
-type Port = {
-  protocol: "TCP" | "UDP"
-  port: number
-  address: string
-}
-
-const ports: Port[] = [
-  {
-    protocol: "TCP",
-    port: 80,
-    address: "192.168.1.10",
-  },
-  {
-    protocol: "TCP",
-    port: 443,
-    address: "192.168.1.11",
-  },
-  {
-    protocol: "UDP",
-    port: 53,
-    address: "192.168.1.12",
-  },
-  {
-    protocol: "TCP",
-    port: 22,
-    address: "192.168.1.13",
-  },
-  {
-    protocol: "UDP",
-    port: 123,
-    address: "192.168.1.14",
-  },
-  {
-    protocol: "TCP",
-    port: 80,
-    address: "192.168.1.10",
-  },
-  {
-    protocol: "TCP",
-    port: 443,
-    address: "192.168.1.11",
-  },
-  {
-    protocol: "UDP",
-    port: 53,
-    address: "192.168.1.12",
-  },
-  {
-    protocol: "TCP",
-    port: 22,
-    address: "192.168.1.13",
-  },
-  {
-    protocol: "UDP",
-    port: 123,
-    address: "192.168.1.14",
-  },
-  {
-    protocol: "TCP",
-    port: 80,
-    address: "192.168.1.10",
-  },
-  {
-    protocol: "TCP",
-    port: 443,
-    address: "192.168.1.11",
-  },
-  {
-    protocol: "UDP",
-    port: 53,
-    address: "192.168.1.12",
-  },
-  {
-    protocol: "TCP",
-    port: 22,
-    address: "192.168.1.13",
-  },
-  {
-    protocol: "UDP",
-    port: 123,
-    address: "192.168.1.14",
-  },
-  {
-    protocol: "TCP",
-    port: 80,
-    address: "192.168.1.10",
-  },
-  {
-    protocol: "TCP",
-    port: 443,
-    address: "192.168.1.11",
-  },
-  {
-    protocol: "UDP",
-    port: 53,
-    address: "192.168.1.12",
-  },
-  {
-    protocol: "TCP",
-    port: 22,
-    address: "192.168.1.13",
-  },
-  {
-    protocol: "UDP",
-    port: 123,
-    address: "192.168.1.14",
-  },
-  {
-    protocol: "TCP",
-    port: 80,
-    address: "192.168.1.10",
-  },
-  {
-    protocol: "TCP",
-    port: 443,
-    address: "192.168.1.11",
-  },
-  {
-    protocol: "UDP",
-    port: 53,
-    address: "192.168.1.12",
-  },
-  {
-    protocol: "TCP",
-    port: 22,
-    address: "192.168.1.13",
-  },
-  {
-    protocol: "UDP",
-    port: 123,
-    address: "192.168.1.14",
-  },
-]
-
-export const PortTable = async () => {
-  const res = await getUsedPorts() // ? temporary usage for example
-
-  console.debug(res)
-
+export const PortTable = async ({ ports }: { ports: Port[] }) => {
   return (
     <Table className="font-mono">
       <TableHeader className="bg-accent">
@@ -164,7 +27,7 @@ export const PortTable = async () => {
               {port.port}
             </TableCell>
             <TableCell className="px-3 py-2 text-muted-foreground">
-              {port.address}
+              {port.ip}
             </TableCell>
             <TableCell className="px-3 py-2">
               <span
