@@ -1,3 +1,4 @@
+import { PortFooter } from "./port-footer"
 import { PortHeader } from "./port-header"
 import { PortTable } from "./port-table"
 
@@ -7,6 +8,7 @@ export const PortSection = () => {
     <section className="flex h-fit w-full min-w-1/2 flex-col bg-green-500 lg:w-fit lg:rounded">
       <PortHeader />
       <PortTable />
+      <PortFooter />
     </section>
   )
 }
