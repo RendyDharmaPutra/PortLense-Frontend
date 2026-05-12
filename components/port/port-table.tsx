@@ -39,6 +39,106 @@ const ports: Port[] = [
     port: 123,
     address: "192.168.1.14",
   },
+  {
+    protocol: "TCP",
+    port: 80,
+    address: "192.168.1.10",
+  },
+  {
+    protocol: "TCP",
+    port: 443,
+    address: "192.168.1.11",
+  },
+  {
+    protocol: "UDP",
+    port: 53,
+    address: "192.168.1.12",
+  },
+  {
+    protocol: "TCP",
+    port: 22,
+    address: "192.168.1.13",
+  },
+  {
+    protocol: "UDP",
+    port: 123,
+    address: "192.168.1.14",
+  },
+  {
+    protocol: "TCP",
+    port: 80,
+    address: "192.168.1.10",
+  },
+  {
+    protocol: "TCP",
+    port: 443,
+    address: "192.168.1.11",
+  },
+  {
+    protocol: "UDP",
+    port: 53,
+    address: "192.168.1.12",
+  },
+  {
+    protocol: "TCP",
+    port: 22,
+    address: "192.168.1.13",
+  },
+  {
+    protocol: "UDP",
+    port: 123,
+    address: "192.168.1.14",
+  },
+  {
+    protocol: "TCP",
+    port: 80,
+    address: "192.168.1.10",
+  },
+  {
+    protocol: "TCP",
+    port: 443,
+    address: "192.168.1.11",
+  },
+  {
+    protocol: "UDP",
+    port: 53,
+    address: "192.168.1.12",
+  },
+  {
+    protocol: "TCP",
+    port: 22,
+    address: "192.168.1.13",
+  },
+  {
+    protocol: "UDP",
+    port: 123,
+    address: "192.168.1.14",
+  },
+  {
+    protocol: "TCP",
+    port: 80,
+    address: "192.168.1.10",
+  },
+  {
+    protocol: "TCP",
+    port: 443,
+    address: "192.168.1.11",
+  },
+  {
+    protocol: "UDP",
+    port: 53,
+    address: "192.168.1.12",
+  },
+  {
+    protocol: "TCP",
+    port: 22,
+    address: "192.168.1.13",
+  },
+  {
+    protocol: "UDP",
+    port: 123,
+    address: "192.168.1.14",
+  },
 ]
 
 export const PortTable = () => {
