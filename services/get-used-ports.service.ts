@@ -4,7 +4,17 @@ import { Port } from "@/types/port.type"
 export const getUsedPorts = async (): Promise<
   ApiSuccessResponse<Port[]> | ApiErrorResponse
 > => {
-  const res = await fetch("http://localhost:3001/ports")
+  try {
+    const res = await fetch("http://localhost:3001/ports")
 
-  return await res.json()
+    return await res.json()
+  } catch (error) {
+    console.error("Failed to fetch used ports:", error)
+
+    return {
+      success: false,
+      message: "Unexpected Error Occurred while fetching active ports",
+      data: null,
+    }
+  }
 }

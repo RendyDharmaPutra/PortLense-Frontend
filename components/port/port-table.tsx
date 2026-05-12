@@ -6,7 +6,7 @@ import {
   TableHeader,
   TableRow,
 } from "../ui/table"
-import { Port } from "@/types/port.type"
+import { Port, PortProtocol } from "@/types/port.type"
 
 export const PortTable = async ({ ports }: { ports: Port[] }) => {
   return (
@@ -31,12 +31,16 @@ export const PortTable = async ({ ports }: { ports: Port[] }) => {
             <TableCell className="px-3 py-2">
               <span
                 className={`inline-flex items-center gap-1 ${
-                  port.protocol === "TCP" ? "text-primary" : "text-secondary"
+                  port.protocol === PortProtocol.TCP
+                    ? "text-primary"
+                    : "text-secondary"
                 }`}
               >
                 <span
                   className={`h-1.5 w-1.5 rounded-full ${
-                    port.protocol === "TCP" ? "bg-primary" : "bg-secondary"
+                    port.protocol === PortProtocol.TCP
+                      ? "bg-primary"
+                      : "bg-secondary"
                   }`}
                 ></span>
                 {port.protocol}
