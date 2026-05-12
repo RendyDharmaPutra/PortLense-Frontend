@@ -1,3 +1,4 @@
+import { getUsedPorts } from "@/services/get-used-ports.service"
 import {
   Table,
   TableBody,
@@ -141,7 +142,11 @@ const ports: Port[] = [
   },
 ]
 
-export const PortTable = () => {
+export const PortTable = async () => {
+  const res = await getUsedPorts() // ? temporary usage for example
+
+  console.debug(res)
+
   return (
     <Table className="font-mono">
       <TableHeader className="bg-accent">
