@@ -3,6 +3,12 @@ import { Geist, Inter, JetBrains_Mono } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "PortLense",
+  description: "A simple network port scanner and monitoring tool.",
+}
 
 const geist = Geist({
   subsets: ["latin"],
