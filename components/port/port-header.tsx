@@ -7,9 +7,9 @@ export const PortHeader = () => {
       {/* Title */}
       <div className="flex h-fit flex-row items-center space-x-2">
         <Network className="h-5 w-5 md:h-6 md:w-6" />
-        <h3 className="scroll-m-20 text-xl font-semibold tracking-tight md:text-2xl">
+        <h1 className="scroll-m-20 text-xl font-semibold tracking-tight md:text-2xl">
           Active Port Listener
-        </h3>
+        </h1>
       </div>
 
       {/* Action */}
