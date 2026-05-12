@@ -3,6 +3,9 @@ import { PortFooter } from "./port-footer"
 import { PortHeader } from "./port-header"
 import { PortTable } from "./port-table"
 
+export const dynamic = "force-dynamic"
+export const fetchCache = "force-no-store"
+
 export const PortSection = async () => {
   const res = await getUsedPorts()
 
