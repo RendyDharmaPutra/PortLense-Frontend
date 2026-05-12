@@ -2,6 +2,7 @@ import { getUsedPorts } from "@/services/get-used-ports.service"
 import { PortFooter } from "./port-footer"
 import { PortHeader } from "./port-header"
 import { PortTable } from "./port-table"
+import { EmptyPort } from "./empty-port"
 
 export const dynamic = "force-dynamic"
 export const fetchCache = "force-no-store"
@@ -12,7 +13,7 @@ export const PortSection = async () => {
   return (
     <section className="flex h-fit max-h-150 w-full min-w-1/2 flex-col border lg:w-fit lg:rounded">
       <PortHeader />
-      {res.success ? <PortTable ports={res.data} /> : <h1>Error</h1>}
+      {res.success ? <PortTable ports={res.data} /> : <EmptyPort />}
       <PortFooter />
     </section>
   )
