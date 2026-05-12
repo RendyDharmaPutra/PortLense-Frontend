@@ -1,4 +1,3 @@
-import { getUsedPorts } from "@/services/get-used-ports.service"
 import {
   Table,
   TableBody,
